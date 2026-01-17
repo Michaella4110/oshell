@@ -1,0 +1,33 @@
+.TH BUILTINS 1 "OShell Manual"
+.SH NAME
+builtins \- OShell built-in commands
+.SH DESCRIPTION
+OShell provides the following built-in commands (executed internally without creating a new process):
+.TP
+.B exit
+Exit the shell.
+.TP
+.B cd
+Change directory.
+.TP
+.B env
+Display environment variables.
+.TP
+.B setenv
+Set environment variable.
+.TP
+.B unsetenv
+Remove environment variable.
+.TP
+.B alias
+Manage command aliases.
+.TP
+.B path
+Set command search path.
+.TP
+.B man
+Display manual pages.
+.SH EXIT STATUS
+Builtins return 0 on success, 1 on incorrect usage.
+.SH SEE ALSO
+exit(1), cd(1), env(1), setenv(1), unsetenv(1), alias(1), path(1), man(1)
