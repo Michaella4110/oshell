@@ -1,0 +1,55 @@
+.TH OSHELL 1 "OShell Manual"
+.SH NAME
+oshell \- a simple Unix-like shell
+.SH SYNOPSIS
+.B oshell
+.br
+.B oshell
+script
+.br
+command |
+.B oshell
+.SH DESCRIPTION
+OShell is a simple shell implementing basic Unix shell features including command execution, piping, redirection, variables, and built-in commands.
+.SH OPTIONS
+.TP
+(no arguments)
+Start interactive shell.
+.TP
+script
+Execute commands from file.
+.SH FEATURES
+.TP
+.B Operators
+; && || & > #
+.TP
+.B Builtins
+exit, cd, env, setenv, unsetenv, alias, path, man
+.TP
+.B Variables
+$VAR, $?, $$
+.TP
+.B Path
+Internal search path, not inherited from environment.
+.SH EXIT STATUS
+Returns exit status of last command executed.
+.TP
+0
+Success
+.TP
+1
+General error
+.TP
+126
+Command found but not executable
+.TP
+127
+Command not found
+.SH EXAMPLES
+.nf
+$ oshell
+$ echo "ls -l" | oshell
+$ oshell myscript.txt
+.fi
+.SH SEE ALSO
+exit(1), cd(1), env(1), setenv(1), unsetenv(1), alias(1), path(1), man(1)
