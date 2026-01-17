@@ -1,0 +1,21 @@
+.TH PATH 1 "OShell Manual"
+.SH NAME
+path \- set shell search path
+.SH SYNOPSIS
+.B path
+[dir1 dir2 ...]
+.SH DESCRIPTION
+Set the shell's internal search path for external commands. This path is separate from the system PATH environment variable.
+.TP
+.B path
+Clear the path (no directories to search).
+.TP
+.B path dir1 dir2 ...
+Set path to given directories, searched in order.
+.SH NOTES
+The shell maintains its own internal path list, not inherited from the environment. The default path is /bin.
+.SH EXAMPLES
+.nf
+path /bin /usr/bin /usr/local/bin
+path
+.fi
