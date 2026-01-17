@@ -1,0 +1,24 @@
+.TH ALIAS 1 "OShell Manual"
+.SH NAME
+alias \- create or display aliases
+.SH SYNOPSIS
+.B alias
+[name[=value] ...]
+.SH DESCRIPTION
+Display or set command aliases. Aliases can contain variables and operators.
+.TP
+.B alias
+Display all aliases in NAME='VALUE' format.
+.TP
+.B alias name
+Display alias for name.
+.TP
+.B alias name=value
+Set alias name to value. If name already exists, overwrite it.
+.SH EXAMPLES
+.nf
+alias
+alias ll
+alias ll='ls -l'
+alias myecho='echo $HOME && pwd'
+.fi
