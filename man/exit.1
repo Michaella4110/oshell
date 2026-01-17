@@ -1,0 +1,30 @@
+.TH EXIT 1 "OShell Manual"
+.SH NAME
+exit \- exit the shell
+.SH SYNOPSIS
+.B exit
+[status]
+.SH DESCRIPTION
+Exit the shell with the given status. If no status is provided, exit with 0.
+The status must be a numeric value.
+.SH EXIT STATUS
+.TP
+0
+Success
+.TP
+1
+General error
+.TP
+126
+Command found but not executable
+.TP
+127
+Command not found
+.SH EXAMPLES
+.nf
+exit      # Exit with status 0
+exit 0    # Exit with success
+exit 1    # Exit with error
+exit 126  # Exit with "command not executable" status
+exit 127  # Exit with "command not found" status
+.fi
