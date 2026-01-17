@@ -1,0 +1,38 @@
+.TH CD 1 "OShell Manual"
+.SH NAME
+cd \- change directory
+.SH SYNOPSIS
+.B cd
+[directory]
+.br
+.B cd -
+.br
+.B cd --
+.SH DESCRIPTION
+Change the current working directory.
+.TP
+.B cd
+Change to home directory ($HOME).
+.TP
+.B cd -
+Change to previous directory ($OLDPWD) and print new directory.
+.TP
+.B cd --
+Change to previous directory ($OLDPWD) without printing.
+.TP
+.B cd directory
+Change to specified directory.
+.SH ENVIRONMENT
+.TP
+.B $HOME
+Home directory (used when no argument given).
+.TP
+.B $OLDPWD
+Previous working directory (used with - or --).
+.SH EXAMPLES
+.nf
+cd /tmp
+cd -
+cd
+cd --
+.fi
